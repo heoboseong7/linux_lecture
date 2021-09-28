@@ -1,14 +1,12 @@
 numberRE='^[0-9]+$'
 
-if ! [[ $1 =~ $numberRE ]] ; then
-	echo "$1 is invalid input"
-	exit 1
-fi
-if ! [[ $2 =~ $numberRE ]] ; then
-	echo "$2 is invalid input"
-	exit 1
-fi
-
+for num in $1 $2
+do
+	if ! [[ $num =~ $numberRE ]] ; then
+		echo "$num is invalid input"
+		exit
+	fi
+done
 
 for i in $(seq 1 $1)
 do
