@@ -1,4 +1,4 @@
-numberRE='^[0-9]+$'
+numberRE='^[0-1]{,1}[0-9]$'
 
 for num in $1 $2
 do
